@@ -204,5 +204,6 @@ export function getLastItem(array) {
 // Ask yourself: even if you cannot predict the result exactly, what _do_ you know about what it should return? Use that expectation to write your test
 
 export function getRandomNumber() {
-    return true;
+    
+    return Math.floor(Math.random() * 5);
 }

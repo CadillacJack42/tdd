@@ -8,7 +8,8 @@ import {
     returnAsAString,
     makeLuckyGreeting,
     getSecondItem,
-    getLastItem
+    getLastItem,
+    getRandomNumber
 } from '../functions.js';
 
 const { test, skip } = QUnit;
@@ -144,6 +145,20 @@ test('This function should take an array and return the second item in the array
     const expected2 = "Array is empty"
     const actual2 = getLastItem([])
     expect.equal(expected2, actual2, 'If no element in array, return string saying as much')
+})
+
+test('This function should return a random number between 0 and 5', (expect) => {
+    const expected = true
+    const actual = (getRandomNumber() <= 5)
+    expect.equal(expected, actual, "Should return a number less than 5")
+
+    const expecte = true
+    const actua = (getRandomNumber() >= 0)
+    expect.equal(expecte, actua, "Should return a number greater than 0")
+
+    const expected1 = 'number'
+    const actual1 = typeof getRandomNumber();
+    expect.equal(expected1, actual1, "Should return a number")
 })
 
 
