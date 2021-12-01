@@ -49,7 +49,7 @@ test('This function should take in a number and multiply it by twelve then cut t
 
     const expected1 = 42;
     const actual1 = multiplyBy12ThenHalve(7);
-    expect.equal(expected1, actual1, 'Should multiply 7 by 12 then multiply the result by .5 returning half of 12 * arg');
+    expect.equal(expected1, actual1, 'Should multiply 7 by 12 then multiply the result by .5 returning half of (12 * arg)');
 
     const expected2 = 'number';
     const actual2 = typeof multiplyBy12ThenHalve(5);
@@ -73,6 +73,8 @@ test('This function should take in three numbers, divide the first by the second
     const expected2 = 0;
     const actual2 = divideThenMultiply(1, 0, 1);
     expect.equal(expected2, actual2, 'Should break. Cannot divide by 0. In this case, return 0');
+
+
 });
 
 test('This function should take in three numbers and return those numbers in an array', (expect) => {
@@ -149,11 +151,12 @@ test('This function should take an array and return the second item in the array
 
 test('This function should return a random number between 0 and 5', (expect) => {
     const expected = true
-    const actual = (getRandomNumber() <= 5)
+    let num = getRandomNumber()
+    const actual = (num < 5)
     expect.equal(expected, actual, "Should return a number less than 5")
 
     const expecte = true
-    const actua = (getRandomNumber() >= 0)
+    const actua = (num >= 0)
     expect.equal(expecte, actua, "Should return a number greater than 0")
 
     const expected1 = 'number'

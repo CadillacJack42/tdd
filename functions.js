@@ -75,20 +75,14 @@ Output:
 */
 
 export function divideThenMultiply(firstNumber, secondNumber, thirdNumber) {
-    let bool = true;
-    for(let i = 0; i < arguments.length; i++) {
-        const element = arguments[i];
-        if(typeof element !== 'number') {
-            bool = false;
-            return bool, 0;
-        }
-    }
-    let result = (firstNumber / secondNumber) * thirdNumber;
-    if(secondNumber === 0) {
-        result = 0;
-    }
 
-    return bool, result;
+    if (typeof firstNumber === 'number' && typeof secondNumber === 'number' && typeof thirdNumber === 'number' && secondNumber) {
+        let result = (firstNumber / secondNumber) * thirdNumber;
+        if(secondNumber === 0) {
+                result = 0;
+            }
+        return result
+    } else { return false}
 }
 
 
@@ -204,6 +198,5 @@ export function getLastItem(array) {
 // Ask yourself: even if you cannot predict the result exactly, what _do_ you know about what it should return? Use that expectation to write your test
 
 export function getRandomNumber() {
-    
     return Math.floor(Math.random() * 5);
 }
