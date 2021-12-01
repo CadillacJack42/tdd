@@ -81,5 +81,7 @@
     ],
     "array-bracket-spacing": "error",
     "no-unused-vars": ["error", { "args": "none", "varsIgnorePattern": "skip|test"}]
-  }
+  },
+  "typescript.format.enable": false,
+  "typescript.validate.enable": false
 }
